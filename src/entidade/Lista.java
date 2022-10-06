@@ -41,6 +41,26 @@ public class Lista {
         }
     }
 
+    public void remove(Pessoa value){
+        Node p = this.head;
+
+        while(p != null){
+            if(p.getValue().equals(value)){
+                if(p.equals(this.head)){
+                    this.head = p.getNext();
+                    p.getNext().setPrev(null);
+                } else if(p.equals(this.tail)){
+                    this.tail = p.getPrev();
+                    p.getPrev().setNext(null);
+                }else{
+                    p.getPrev().setNext(p.getNext());
+                    p.getNext().setPrev(p.getPrev());
+                }
+            }
+            p = p.getNext();
+        }
+    }
+
     public void cloneList(Lista l){
         Node p = this.head;
 

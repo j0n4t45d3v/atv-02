@@ -16,6 +16,7 @@ public class Main {
         l.add(p);
         l.add(p2);
         l.add(p3);
+        l.remove(p1);
         l.printList();
         l.cloneList(l2);
         l2.printList();
