@@ -61,6 +61,18 @@ public class Lista {
         }
     }
 
+    public void searchName(int id){
+        Node p = this.head;
+
+        while(p != null){
+            if(p.getValue().getChave() == id){
+                System.out.println("Nome :"+p.getValue().getNome());
+                break;
+            }
+            p = p.getNext();
+        }
+    }
+
     public void cloneList(Lista l){
         Node p = this.head;
 

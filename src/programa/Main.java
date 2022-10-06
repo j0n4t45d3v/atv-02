@@ -20,6 +20,6 @@ public class Main {
         l.printList();
         l.cloneList(l2);
         l2.printList();
-
+        l.searchName(0);
     }
 }
