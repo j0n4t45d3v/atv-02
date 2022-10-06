@@ -41,6 +41,15 @@ public class Lista {
         }
     }
 
+    public void cloneList(Lista l){
+        Node p = this.head;
+
+        while(p != null){
+            l.add(p.getValue());
+            p = p.getNext();
+        }
+    }
+
     public void printList(){
         Node p = this.head;
         while (p != null){
